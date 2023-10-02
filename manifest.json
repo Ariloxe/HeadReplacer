@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Picture Replacer",
+  "version": "1",
+  "description": "Marre de la tête horrible que tu as sur ta photo école directe ? Cette extension te permet de changer et mettre ce que tu veux à la place. Développé par Erwan",
+  "permissions": [
+    "activeTab",
+    "https://www.ecoledirecte.com/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
